@@ -63,5 +63,31 @@ const Info = styled.div`
 `;
 
 -------------
+## how to show all product with proper space iirespective of screen size
+ flex-wrap: wrap;
+
+
+## how to show icon on prodct on hover 
+
+const Info = styled.div`
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.5s ease;
+`;
+
+const Container = styled.div`
+  &:hover ${Info}{
+    opacity: 1;
+  }
+`;
+
+const Icon = styled.div`
+  &:hover {
+    background-color: #e9f5f5;
+    transform: scale(1.1);
+  }
+`;
+
+
 
 

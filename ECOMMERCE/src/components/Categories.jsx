@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  border: 1px solid yellowgreen;
+  /* border: 1px solid yellowgreen; */
 `
 
 
