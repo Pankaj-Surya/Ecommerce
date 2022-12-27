@@ -88,6 +88,20 @@ const Icon = styled.div`
   }
 `;
 
+## InputContainer divede flex : 1-8
+const InputContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Input = styled.input`
+flex: 8;  
+`;
+
+const Button = styled.button`
+  flex: 1;
+`;
+
 
 
 
