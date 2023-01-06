@@ -1,5 +1,6 @@
 git clone --single-branch -b react-mini https://github.com/safak/youtube.git
 
+
 ## How to display Products and Filtered Products List ?
 1. ProductList page :  capture the filter and sort value using onchange event and value attribute. cat from url using useLocation 
 hook
@@ -116,4 +117,38 @@ Object.entries(filters).every(([key, value]) =>
 products
       .slice(0, 8)
       .map((item) => <Product item={item} key={item.id} />)
+
+## how to show product Page data
+1.from products comp will pass product id in url
+2.getLocation hook we will get pid
+3.api product/find/+pid will get product information
+
+
+## how to show notification increase when click on addToCart button
+1. we user redux toolkit created reducer 
+2. reducer has 1.name : cart 2,intitalState : {product : [],quantity, price }
+3. cofigured store. store has reducer info and pass to index.js using provider
+4. in product.js page when on click AddToCart button we dispatch action addCart method and it will send to store
+5. get cart data from store using useSelect hook and give to badge notification
+
+
+## how to login user redux setup
+1. userslice - 1.name : user 
+               2.initialState :{  user : null ,isFetching : false ,error:false 
+               3.reducer action : 3.1.   loginStart   3.2.loginSuccess 3.3loginFail
+2. giver userSlice to store
+3. apiCall : login (dispatch,user) -> axios    post call
+4. onclick on login function : call login(dispatch,{username,password})
+ 
+
+
+
+=====================06-01-2023=============
+
+## onclick on addToCart button-> check user logged in or not-> 
+1.if logged in -> cart checkout page
+2.else -> alert msg pleasee login 
+
+## problem on loading login && register 
+
 
