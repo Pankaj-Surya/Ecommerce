@@ -151,4 +151,5 @@ products
 
 ## problem on loading login && register 
 
+## login user show there cart data even logout and again login show previous car data ?
 
