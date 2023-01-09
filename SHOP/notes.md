@@ -151,5 +151,26 @@ products
 
 ## problem on loading login && register 
 
-## login user show there cart data even logout and again login show previous car data ?
 
+## login user show there cart data even logout and again login show previous car data ?
+1.created remove cart action in cartReducer
+2.when click logout we dispatch action removeCart in logout fn   
+
+
+## when click on  login even we enter wrong cred it will redirect to home page
+when click on login -> loginHandler fn triggered ->
+in  login(dispatch,{username , password }) called->
+(apiCalls) login fn 
+has three actions
+loginStart()
+
+const res =await axios.post("http://localhost:5000/api/auth/login",{username:username,password:password})
+
+loginSuccess(res.data)
+loginFaliure()
+
+
+Idea 1:
+1.keep watch(useEffect) on error in userRedx
+2.if error is true the 
+disPLAY  error message
